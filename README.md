@@ -140,3 +140,4 @@ For any issues or questions, check:
 **Note**: This project is optimized for thesis research on traffic detection in Dhaka city. 
 
 https://www.kaggle.com/code/taha07/dhaka-ai-traffic-detection-using-yolov8/notebook
+https://www.kaggle.com/datasets/sazedcse17/vehicle-bd-dataset
