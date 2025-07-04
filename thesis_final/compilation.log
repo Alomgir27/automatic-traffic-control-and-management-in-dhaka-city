@@ -1,0 +1,1380 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2024/02/08 v1.4n Standard LaTeX document class
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.de
+f)
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\engli
+sh.ldf))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\b
+abel-english.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty))
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.c
+fg))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphi
+cs.cfg)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex
+.def)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty)
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+ (C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.st
+y
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.s
+ty)) (C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty)
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys
+.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvde
+finekeys.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfesca
+pe.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftex
+cmds.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infware
+rr.sty)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.st
+y
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\ge
+ttitlestring.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions
+.sty)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringe
+nc.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigint
+calc.sty))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.s
+ty))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.de
+f
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.
+sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\reru
+nfilecheck.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uni
+quecounter.sty)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.st
+y)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.c
+fg))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.
+cfg)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.
+ltx))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.st
+y))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.
+sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.s
+ty) (C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+) (C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e
+\l3keys2e.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend
+-pdftex.def)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.t
+ex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\t
+ikz.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.
+sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrc
+s.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+util-common.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+util-latex.def)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+rcs.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.
+tex)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfc
+ore.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgf
+sys.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gfsys.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+keys.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+keyslibraryfiltered.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gf.cfg)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gfsys-pdftex.def
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gfsys-common-pdf.def)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gfsyssoftpath.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\p
+gfsysprotocol.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcore.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.
+code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathu
+til.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathp
+arser.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.basic.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.trigonometric.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.random.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.comparison.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.base.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.round.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.misc.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+unctions.integerarithmetics.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathc
+alc.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathf
+loat.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.c
+ode.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorepoints.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorepathconstruct.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorepathusage.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorescopes.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoregraphicstate.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoretransformations.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorequick.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoreobjects.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorepathprocessing.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorearrows.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoreshade.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoreimage.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoreexternal.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorelayers.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcoretransparency.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorepatterns.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pg
+fcorerdf.code.tex)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmo
+duleshapes.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmo
+duleplot.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\p
+gfcomp-version-0-65.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\p
+gfcomp-version-1-18.sty))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffo
+r.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfke
+ys.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+keys.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.st
+y
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.
+code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgf
+for.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz\tikz.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgf
+libraryplothandlers.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmo
+dulematrix.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.s
+ty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.revision.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+core.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfp
+lotssysgeneric.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgf
+plotslibrary.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfco
+mpatib\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgf
+libraryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfco
+mpatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotsutil.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststru
+cture\pgfplotsliststructure.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststru
+cture\pgfplotsliststructureext.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststru
+cture\pgfplotsarray.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststru
+cture\pgfplotsmatrix.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable
+\pgfplotstableshared.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststru
+cture\pgfplotsdeque.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotsbinary.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotsbinary.data.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotsutil.verb.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgf
+librarypgfplots.surfshading.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfl
+ibrarypgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotscolormap.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgf
+plotscolor.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+stackedplots.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+plothandlers.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+meshplothandler.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+meshplotimage.code.tex)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.scaling.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+coordprocessing.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.errorbars.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.markers.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+ticks.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots
+.paths.code.tex)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmo
+duledecorations.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/dec
+orations\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/dec
+orations\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tik
+zlibrarypgfplots.contourlua.code.tex))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer
+/tikz/libraries\tikzlibraryplotmarks.code.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgf
+libraryplotmarks.code.tex)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorith
+m.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorith
+mic.sty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcolorbox
+.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim.sty)
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspac
+es.sty)))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.s
+ty) (main.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pd
+f.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstop
+df-base.sty
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-s
+ys.cfg))
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.s
+ty)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 83.
+
+(chapters/title_page.tex
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd)
+Underfull \vbox (badness 10000) has occurred while \output is active
+[1{C:/Users/Alomgir27/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[2]) (chapters/abstract.tex
+Underfull \vbox (badness 6396) has occurred while \output is active
+[3]
+Overfull \hbox (8.98682pt too wide) in paragraph at lines 12--13
+[]\T1/cmr/m/n/12 The traf-fic man-age-ment sys-tem im-ple-ments a Weighted Job 
+First (WJF) schedul-
+
+Underfull \vbox (badness 2478) has occurred while \output is active
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[4]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[5])
+No file main.toc.
+
+[6]
+No file main.lof.
+
+[7]
+No file main.lot.
+
+[8] (chapters/introduction.tex
+Chapter 1.
+
+LaTeX Warning: Citation `mustafa2023dhaka' on page 9 undefined on input line 6.
+
+
+
+LaTeX Warning: Citation `karim2022traffic' on page 9 undefined on input line 8.
+
+
+
+LaTeX Warning: Citation `wu2014emergency' on page 9 undefined on input line 10.
+
+
+
+Underfull \vbox (badness 2671) has occurred while \output is active
+[9]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[13]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[15]) (chapters/literature_review.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[16]
+Chapter 2.
+
+Overfull \hbox (1.75659pt too wide) in paragraph at lines 6--7
+\T1/cmr/m/n/12 Traffic man-age-ment has been a sub-ject of ex-ten-sive re-searc
+h, par-tic-u-larly in densely
+
+LaTeX Warning: Citation `webster1958traffic' on page 17 undefined on input line
+ 12.
+
+
+[17]
+
+LaTeX Warning: Citation `rahman2020traffic' on page 18 undefined on input line 
+14.
+
+
+LaTeX Warning: Citation `hunt1981scoot' on page 18 undefined on input line 18.
+
+
+LaTeX Warning: Citation `zhang2020intelligent' on page 18 undefined on input li
+ne 28.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[18]
+
+LaTeX Warning: Citation `redmon2016yolo' on page 19 undefined on input line 34.
+
+
+
+LaTeX Warning: Citation `singh2021realtime' on page 19 undefined on input line 
+34.
+
+
+LaTeX Warning: Citation `li2017diffusion' on page 19 undefined on input line 40
+.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[19]
+
+LaTeX Warning: Citation `farooq2020priority' on page 20 undefined on input line
+ 50.
+
+
+LaTeX Warning: Citation `wu2014emergency' on page 20 undefined on input line 52
+.
+
+
+LaTeX Warning: Citation `wong2020intelligent' on page 20 undefined on input lin
+e 58.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[20]
+
+LaTeX Warning: Citation `sharma2021smart' on page 21 undefined on input line 68
+.
+
+
+LaTeX Warning: Citation `ahmed2019urban' on page 21 undefined on input line 80.
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[21]
+
+LaTeX Warning: Citation `islam2020design' on page 22 undefined on input line 92
+.
+
+
+Overfull \hbox (5.35765pt too wide) in paragraph at lines 96--96
+[]\T1/cmr/bx/n/17.28 Performance Eval-u-a-tion in Traf-fic Man-age-ment 
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[22]
+
+LaTeX Warning: Citation `deccanherald2023ai' on page 23 undefined on input line
+ 110.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[23]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[25]) (chapters/methodology.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[26]
+Chapter 3.
+
+[27]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[29]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[31]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[32]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[33]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[34]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[35]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[38]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[39]) (chapters/system_design.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[40]
+Chapter 4.
+
+[41]
+
+LaTeX Warning: File `figures/system_architecture.png' not found on input line 2
+2.
+
+
+! Package pdftex.def Error: File `figures/system_architecture.png' not found: u
+sing draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 ...extwidth]{figures/system_architecture.png}
+                                                  
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[42]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[43]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[44]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[45]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[46]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[47]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[48]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[49]
+
+LaTeX Warning: File `figures/data_flow.png' not found on input line 331.
+
+
+! Package pdftex.def Error: File `figures/data_flow.png' not found: using draft
+ setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.331 ...dth=0.9\textwidth]{figures/data_flow.png}
+                                                  
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[50]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[51]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[52]
+! Undefined control sequence.
+l.394 \TRY
+          
+! Undefined control sequence.
+l.396 \CATCH
+            {CameraError}
+! Undefined control sequence.
+l.398 \CATCH
+            {NetworkError}
+! Undefined control sequence.
+l.400 \CATCH
+            {ProcessingError}
+! Undefined control sequence.
+l.402 \CATCH
+            {HardwareError}
+! Undefined control sequence.
+l.404 \ENDTRY
+             
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[53]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[54]) (chapters/implementation.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[55]
+Chapter 5.
+
+[56]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[57]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[58]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[59]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[60]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[61]) (chapters/results.tex
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[62]
+Chapter 6.
+
+[63]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.49998pt}.
+
+[64]
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.88 
+     
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.128 
+      
+
+Overfull \hbox (92.37154pt too wide) in paragraph at lines 117--128
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.150 
+      
+
+Overfull \hbox (108.07454pt too wide) in paragraph at lines 138--150
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.170 
+      
+
+Overfull \hbox (28.57571pt too wide) in paragraph at lines 160--170
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.205 
+      
+
+Overfull \hbox (23.18007pt too wide) in paragraph at lines 193--205
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.211 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.228 
+      
+
+Overfull \hbox (103.53549pt too wide) in paragraph at lines 215--228
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.239 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.262 
+      
+
+Overfull \hbox (91.4493pt too wide) in paragraph at lines 243--262
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.282 
+      
+
+Overfull \hbox (70.37659pt too wide) in paragraph at lines 272--282
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.293 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.309 
+      
+
+Overfull \hbox (25.48929pt too wide) in paragraph at lines 297--309
+ [][] 
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 \begin{table}[h]
+                      
+Runaway argument?
+{table> 
+! Paragraph ended before \end  was complete.
+<to be read again> 
+                   \par 
+l.328 
+      
+
+Overfull \hbox (33.58307pt too wide) in paragraph at lines 317--328
+ [][] 
+) (chapters/discussion.tex
+Chapter 7.
+) (chapters/conclusion.tex
+Chapter 8.
+
+Underfull \hbox (badness 1616) in paragraph at lines 124--125
+[]\T1/cmr/bx/n/12 Multi-modal Sen-sor In-te-gra-tion\T1/cmr/m/n/12 : In-cor-po-
+rat-ing ad-di-tional sen-sor
+) (chapters/bibliography.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+[]\T1/cmr/m/n/12 Kallol Mustafa, "Why ex-actly is Dhaka the slow-est city in
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+\T1/cmr/m/n/12 the world?" \T1/cmr/m/it/12 The Daily Star\T1/cmr/m/n/12 , Oct. 
+8, 2023. [On-line]. Avail-
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+\T1/cmr/m/n/12 able: []$\T1/cmtt/m/n/12 https : / / www . thedailystar . net / 
+opinion / views / news /
+) (appendices/code_samples.tex
+Appendix A.
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.st
+y)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.s
+ty)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.435 ...YAML, caption=Dataset Configuration YAML]
+                                                  
+
+! Package Listings Error: language yaml undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.435 ...YAML, caption=Dataset Configuration YAML]
+                                                  
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.s
+ty)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ...guage=YAML, caption=System Configuration]
+                                                  
+
+! Package Listings Error: language yaml undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.461 ...guage=YAML, caption=System Configuration]
+                                                  
+
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.s
+ty)
+(C:\Users\Alomgir27\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.s
+ty)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 ...JSON, caption=API Endpoint Documentation]
+                                                  
+
+! Package Listings Error: language json undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 ...JSON, caption=API Endpoint Documentation]
+                                                  
+)
+
+! LaTeX Error: \begin{table} on input line 313 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 \end{document}
+                    
+(main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+! You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.120 \end{document}
+                    
+
+! LaTeX Error: \begin{table} on input line 313 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 \end{document}
+                    
+! Missing } inserted.
+<inserted text> 
+                }
+l.120 \end{document}
+                    
+)
+! Emergency stop.
+<*> ./main.tex
+              
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on main.log.

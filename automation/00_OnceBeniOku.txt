@@ -1,0 +1,243 @@
+###########################################################################
+#                                                                         #
+#                          BIR ISLEM YAPMADAN ONCE                        #
+#                       [0] ve [1] BASLIKLARINI OKUYUN                    #
+#                                                                         #
+# v1.0 - 15.06.2015: Ilk surum (S.K.Yerli)                                #
+# v1.1 - 04.01.2018: UAK-2018 surumu (S.K.Yerli)                          #
+# v2.0 - 01.08.2019: TJAA surumu (S.K.Yerli)                              #
+# v2.1 - 01.04.2021: TJAA surumu (S.K.Yerli)                              #
+# v2.2 - 01.01.2022: tjaa-2.1 için güncellendi                            #
+# v2.3 - 01.09.2024: tjaa-3.0 için güncellendi                            #
+#                                                                         #
+###########################################################################
+
+[0] Bu klasorde bulunan dosyalarin tanimlari
+
+    "TJAA LaTeX Sablonu" kullanilarak olusturulmus ornek makale
+    -----------------------------------------------------------
+    Example.tex - LaTeX kaynak kodu (Yazim Dili: UTF-8)
+    Example.bib - BibTeX kaynak kodu (Yazim Dili: UTF-8)
+    Example.pdf - "pdflatex" komutunun kaynak icin urettigi PDF dosyasi
+
+    Example-Turkce.tex - LaTeX kaynak kodu - Turkce (Encoding: UTF-8)
+    Example-Turkce.pdf - "pdflatex" komutunun kaynak icin urettigi PDF dosyasi
+
+    "TJAA LaTeX Sablonu"
+    -----------------------------------------------------------
+    tjaa.cls    - 'LaTeX Class' dosyasi
+    tjaa.bst    - 'BibTeX Style' dosyasi
+
+[1] TJAA Sablonunun kullanim bicimleri
+
+    Asagida farkli kullanim aliskanliklarina gore hazirlanmis yonergeler
+    bulacaksiniz. Lutfen size uygun olanini secip tek tek uygulayin.
+
+    BIREYSEL KURULUM
+    ----------------
+    Sablonu kendi PC'nizde ya da sunucunuzda kullanacaksaniz [A] ya da [B]
+    secenegini okuyun.
+
+    SUNUCU KURULUMU
+    ----------------
+    Sistem yoneticisiyseniz [C] secenegindeki islemleri yapip yonergenin
+    sonunda belirtilen dosya yerlerini tum kulllanicilariniza duyurun.
+
+
+###########################################################################
+#                                                                         #
+#                  tjaa.cls SABLONUNUN KULLANIM BICIMLERI                 #
+#                                                                         #
+###########################################################################
+
+[A] Hizli Baslangic - LaTeX'le ilgili neyin ne oldugunu bilenler icin
+---------------------------------------------------------------------
+
+    1) Makaleniz icin bir klasor olusturun (or. TJAA-Soyad.Ad).
+
+    2) Bu klasorun icine, yukarida "TJAA LaTex Sablonu" altindaki dosyalari
+       ve "Example.tex" kopyalayin.
+
+       Birden cok makale hazirliyorsaniz yukaridaki klasorun icinde alt
+       klasorler (or. TJAA-Soyad.Ad/M01, TJAA-Soyad.Ad/M02 v.b) acip bu
+       dosyalari her birine kopyalayin.
+
+    3) Tum grafiklerinizi (yalnizca PNG ve PDF uzantilari kullanilir)
+       olusturdugunuz LaTeX dosyasinin klasorunde toplayin.
+
+    4) "Example.tex" dosya adini "Soyad.Ad-MXX.tex" olarak degistirin ki diğer
+       benzer LaTeX dosyalariyla karismasin.
+
+    5) Yazım aliskanliginiz ve araclarina uygun bicimde bu dosyayi duzenleyin.
+       Lutfen "Ornek Makalede" verilen uyarilara uyunuz. Bu ilgili sayının
+       daha hizli olusturulmasini saglayacaktir.
+
+       Anlayisiniz icin simdiden tesekkur ederiz.
+
+    6) LaTeX kaynak kodundan PDF dosyasi uretin.
+       LUTFEN YALNIZCA "pdflatex latex_dosyasi" KOMUTUNU ya da BUNA KARSILIK
+       GELEN WINDOWS ISLEVINI KULLANIN.
+       ".log" uzantili dosyada onemsiz hatalar (warnings) disinda bir sey
+       olmadigindan emin olun.
+       Ayrica bu dosyanin sonunda PDF dosyasinin uretildigini de gozleyin.
+
+       PDF dosyasini aliskanliginiza gore acin ve inceleyin. Dikkat etmeniz
+       gereken en onemli ayrintilar:
+       (a) Yazar adlari, adresler dogru mu?
+       (b) Yazar siralamasi dogru mu?
+       (c) Tum grafikler/tablolar yuklendi mi?
+       (d) Tum grafik/tablo altlari dogru sirada numralandirildi mi?
+       (e) Atif verilen tum kaynaklar sonda listelendi mi?
+       (f) Tum atiflar tiklanabilir ve dogru mu?
+       (g) [UAK'a ozel] Sayfa sayisi verilen sinirlara uyuyor mu?
+
+    7) Urettiginiz makaleyi TJAA hakem surecine yuklemek icin makale
+       klasorunun icinde bir alt klasor olusturmaniz onerilir (or. TJAA-v1).
+       Bu klasor adinin sonundaki "vxx" surum numarasi hakem surecini dogru
+       yonetmeniz icin yararlı olacaktir.
+       Boyle bir klasorde YALNIZCA asagidaki dosyalari bulundurunuz:
+
+       Ayni dosya adiyla (or. Soyad.Ad-M01) eklenecek dosyalar:
+          (1) Tek bir LaTeX Kaynak kodu; ".tex" uzantili.
+          (2) Tek bir BibTeX dosyasi; ".bib" uzantili.
+              Kaynaklarda BibTeX yontemi kullanilmadiysa yok sayilacak.
+       Farkli dosya adlari ile eklenecek dosyalar:
+          (3) Tum gorsel malzeme; ".png" ya da ".pdf" uzantili.
+              BASKA UZANTILI DOSYALAR KABUL EDILMEMEKTEDIR.
+              Her bir dosya cozunurlugu en az 300 dpi ya da yukari olmalidir.
+
+    TJAA Makalesi icin
+    ------------------
+    8) Dergipark'ta hesap acin -ya da- hesabiniza giris yapin
+       https://dergipark.org.tr/
+
+    9) Baglantidaki yonergeleri takip edin:
+       https://dergipark.org.tr/journal/2894/submission/start
+
+    TJAA - Ozel Sayi icin (yani UAK)
+    --------------------------------
+    8) "basvur.uak.info.tr" adresine UAK kullanici e-postanizla girin.
+       (a) UAK takvimini gozleyin.
+       (b) Sunumunuz basilmak uzere Bilim Komitesince kabul etilmisse
+           DergiPark'a kayit olun ya da giris yapin (bkz. yukarisi)
+	   ve orada yukleme yapin.
+
+       Katkiniz icin simdiden tesekkurler.
+
+
+[B] Yeni Baslayanlar ya da Son Kullanicilar için LaTeX Bilgilendirmesi
+----------------------------------------------------------------------
+
+    1) LaTeX ile ilgli "hic birsey" ya da "biraz" bilginiz varsa lutfen
+       once asagidaki baglantida verilen kurulum ve bilgilendirmeleri yapin:
+
+       http://math.ucr.edu/~huerta/latexforbeginners.html
+
+    2) Benzer bicimde LaTeX kullanimi icin asagidaki sayfalardan
+       baslayabilirsiniz:
+
+       https://en.wikibooks.org/wiki/LaTeX/Basics
+
+       http://www.latex-tutorial.com/tutorials/beginners/
+
+       http://www.cis.upenn.edu/~byorgey/precalc/docs/LaTeX-cheat-sheet.pdf
+
+    3) LaTeX ile Kaynak duzenlemenin tum ayrintilari icin su adresi inceleyin:
+
+       https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+
+       http://merkel.zoneo.net/Latex/natbib.php
+
+
+    Isin basinda, daha once LaTeX kullanmis kisilerden yardim almaniz ogrenme
+    hizinizi arttiracaktir. Bir kac denemeden sonra yalnizca yazdiginiz metne
+    odaklanabileceksiniz; zaten LaTeX'in tum felsefesi de budur:
+
+               NASIL yazdiginiz degil, NE yazdiginiz onemlidir
+
+    Bu baglamda [0] bolumundeki "Ornek Makale" dosyasini alip bolumleri kendi
+    bildirinize uygun bicimde doldurursaniz en onemli baslangic asamayi gecmis
+    olursunuz. Sekil, Tablo ve Kaynak duzenlemede zorlandiginiz anda, zaman
+    gecirmeden yardim alarak cozum uretmenizi oneririz.
+
+    Bu asamayi gectikten sonra [A] bolumundeki yonergeleri tamamlanmaniz ya da
+    yardim alarak tamamlatmaniz gerekmektedir.
+
+    Katkiniz ve anlayisiniz icin tesekkurler.
+
+[C] TJAA LaTeX Sablonu icin Sunucu Kurulumu (admin)
+--------------------------------------------------
+
+    TJAA Sablonu icin kurulum dosyasi (.ins uzantili) uretilmemistir.
+    Bu yuzden "elle" kurulum yapilmak durumundadir.
+    Bu kurulum dosyasi uretilene kadar asagidaki anlatildigi gibi sablonun
+    kurulumu gerceklestirin.
+
+    1) tjaa-X.XX.zip dosyasini INDIRIN
+
+    2) Gecici bir klasorde icerigini ACIN
+
+       Unix/Linux:
+       -----------
+       cd /tmp
+       unzip tjaa-X.XX.zip
+       cd tjaa-X.XX
+
+       Windows:
+       --------
+       * ZIP dosyasinda sag tiklayin
+       * "Buraya ac" secenegini (ya da esdegerini) secin
+       * "tjaa-X.XX" klasoru olusacaktir. Bunu secip icine gidin.
+
+    3) Dosyalari dogru klasorlere KOPYALAYIN:
+
+       Daha once hic dis paket kurmadiysaniz yerel bir LaTeX klasor dizini
+       kurmalisiniz. Bu dizin TDS standartlarina uygun olmalidir ki LaTeX
+       kuracaginiz paket dosyalarina erisebilsin.
+
+       WINDOWS'da asagidaki islemleri LaTeX kurulumunun sagladigi GUI
+       yardimiyla yapabilirsiniz. Kurdugunuz LaTeX paketine (cogunlukla
+       MikTeX) gore degisiklik gosterse de aramaniz gereken menu basligi
+       "Dosyadan/Disaridan Paket ekle" olmalidir.
+
+       Oyle ya da boyle asagidaki klasor yapisini olusturun:
+       -----------------------------------------------------
+       /usr/local/share/
+           .../texmf/tex/latex/tjaa/
+           .../texmf/bibtex/bib/tjaa/
+           ................/bst/tjaa/
+           .../texmf/doc/latex/tjaa/
+
+       Burada "/usr/local/share/texmf" LaTeX icin TEXMFLOCAL olarak
+       tanimlanmalidir. LaTeX paketlerindeki farkliliktan dolayi bu TEXMFLOCAL
+       acilmasi ve tanimlanmasi farklilik gostermektedir. Lutfen bunu kendi
+       olanaklarinizla cozunuz.
+
+       Dosyalari kopyalayin:
+       ---------------------
+       tjaa.cls        => TEXMFLOCAL/tex/latex/tjaa
+       tjaa.bst        => TEXMFLOCAL/bibtex/bst/tjaa
+       00_* Example*   => TEXMFLOCAL/doc/latex/tjaa
+
+    4) LaTeX indeksini yeniden OLUSTURUN
+
+       Hangi LaTeX paketi kurulduysa ona ozel index guncelleyicisini
+       calistirmalisiniz.
+       Secenekleriniz: teTeX, TeXlive icin "texhash"
+
+       Bu islemin WINDOWS'daki karsiligina ornek icin asagidaki baglantiyi
+       okuyun:
+       http://www.dedoimedo.com/computers/miktex.html
+
+    5) DUYURUN
+
+    6) Daha deneyimliler icin web destegi:
+       https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages
+
+###########################################################################
+#                                                                         #
+#          BU BELGEDE GORDUGUNUZ HATALARI, YORUM VE ONERILERINIZI         #
+#                   LUTFEN DOGRUDAN S.K.YERLI'YE ILETINIZ.                #
+#                                TESEKKURLER                              #
+#                                                                         #
+###########################################################################

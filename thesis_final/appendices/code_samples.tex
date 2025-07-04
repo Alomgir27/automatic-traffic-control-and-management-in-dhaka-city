@@ -1,0 +1,730 @@
+\chapter{Code Samples and Technical Implementation}
+\label{app:code_samples}
+
+This appendix provides detailed code samples and technical implementation details for the key components of the traffic management system.
+
+\section{YOLOv11 Model Training Code}
+\label{app:yolo_training}
+
+The following code demonstrates the training process for the YOLOv11 model used in the traffic management system:
+
+\begin{lstlisting}[language=Python, caption=YOLOv11 Training Implementation]
+import torch
+import torch.nn as nn
+from ultralytics import YOLO
+import yaml
+import os
+
+class TrafficModelTrainer:
+    def __init__(self, config_path):
+        self.config = self.load_config(config_path)
+        self.model = YOLO('yolov11n.pt')  # Load pre-trained model
+        
+    def load_config(self, config_path):
+        with open(config_path, 'r') as file:
+            return yaml.safe_load(file)
+    
+    def train_model(self):
+        # Training configuration
+        results = self.model.train(
+            data='traffic_dataset.yaml',
+            epochs=256,
+            imgsz=640,
+            batch=16,
+            workers=8,
+            device='cuda' if torch.cuda.is_available() else 'cpu',
+            project='traffic_detection',
+            name='yolov11_traffic',
+            save_period=10,
+            val=True,
+            plots=True,
+            verbose=True
+        )
+        return results
+    
+    def evaluate_model(self):
+        # Model evaluation
+        metrics = self.model.val()
+        return metrics
+    
+    def export_model(self):
+        # Export model for deployment
+        self.model.export(format='onnx')
+        return "Model exported successfully"
+
+# Usage
+trainer = TrafficModelTrainer('config.yaml')
+results = trainer.train_model()
+metrics = trainer.evaluate_model()
+\end{lstlisting}
+
+\section{Traffic Control Algorithm Implementation}
+\label{app:traffic_control}
+
+The Weighted Job First (WJF) algorithm implementation for traffic lane management:
+
+\begin{lstlisting}[language=Python, caption=WJF Traffic Control Algorithm]
+import time
+import threading
+from collections import deque
+import numpy as np
+
+class TrafficController:
+    def __init__(self, num_lanes=4):
+        self.num_lanes = num_lanes
+        self.lane_queues = [deque() for _ in range(num_lanes)]
+        self.lane_weights = [0.0] * num_lanes
+        self.lane_last_served = [0.0] * num_lanes
+        self.emergency_queue = deque()
+        self.current_green_lane = 0
+        self.min_green_time = 30  # seconds
+        self.max_green_time = 90  # seconds
+        self.starvation_threshold = 180  # seconds
+        
+    def calculate_lane_weight(self, lane_id):
+        """Calculate priority weight for a lane using WJF algorithm"""
+        current_time = time.time()
+        
+        # Factors for weight calculation
+        vehicle_count = len(self.lane_queues[lane_id])
+        wait_time = current_time - self.lane_last_served[lane_id]
+        
+        # Starvation prevention
+        starvation_factor = 1.0
+        if wait_time > self.starvation_threshold:
+            starvation_factor = 2.0
+        
+        # Weight calculation
+        weight = (vehicle_count * 0.6 + 
+                 wait_time * 0.3 + 
+                 starvation_factor * 0.1)
+        
+        return weight
+    
+    def update_lane_weights(self):
+        """Update weights for all lanes"""
+        for i in range(self.num_lanes):
+            self.lane_weights[i] = self.calculate_lane_weight(i)
+    
+    def select_next_lane(self):
+        """Select next lane based on WJF algorithm"""
+        if self.emergency_queue:
+            return self.handle_emergency_vehicle()
+        
+        self.update_lane_weights()
+        return np.argmax(self.lane_weights)
+    
+    def handle_emergency_vehicle(self):
+        """Handle emergency vehicle prioritization"""
+        emergency_lane = self.emergency_queue.popleft()
+        return emergency_lane
+    
+    def add_vehicle(self, lane_id, vehicle_type='normal'):
+        """Add vehicle to lane queue"""
+        if vehicle_type == 'emergency':
+            self.emergency_queue.append(lane_id)
+        else:
+            self.lane_queues[lane_id].append(vehicle_type)
+    
+    def process_traffic_light(self):
+        """Main traffic light control loop"""
+        while True:
+            next_lane = self.select_next_lane()
+            
+            if next_lane != self.current_green_lane:
+                self.switch_traffic_light(next_lane)
+                self.current_green_lane = next_lane
+                self.lane_last_served[next_lane] = time.time()
+            
+            # Calculate green time based on queue length
+            queue_length = len(self.lane_queues[next_lane])
+            green_time = min(self.max_green_time, 
+                           max(self.min_green_time, 
+                               queue_length * 3))
+            
+            time.sleep(green_time)
+    
+    def switch_traffic_light(self, lane_id):
+        """Switch traffic light to specified lane"""
+        # Hardware control implementation
+        self.send_signal_to_hardware(lane_id)
+        print(f"Traffic light switched to lane {lane_id}")
+    
+    def send_signal_to_hardware(self, lane_id):
+        """Send control signal to hardware (Arduino/NodeMCU)"""
+        # Implementation for hardware communication
+        pass
+\end{lstlisting}
+
+\section{Object Detection and Classification}
+\label{app:object_detection}
+
+Real-time object detection implementation for traffic monitoring:
+
+\begin{lstlisting}[language=Python, caption=Real-time Object Detection]
+import cv2
+import numpy as np
+from ultralytics import YOLO
+import threading
+import queue
+
+class TrafficDetector:
+    def __init__(self, model_path):
+        self.model = YOLO(model_path)
+        self.class_names = ['vehicle', 'person', 'emergency_vehicle']
+        self.detection_queue = queue.Queue()
+        self.running = False
+        
+    def detect_objects(self, frame):
+        """Detect objects in a single frame"""
+        results = self.model(frame)
+        detections = []
+        
+        for result in results:
+            boxes = result.boxes
+            if boxes is not None:
+                for box in boxes:
+                    # Extract bounding box coordinates
+                    x1, y1, x2, y2 = box.xyxy[0].cpu().numpy()
+                    confidence = box.conf[0].cpu().numpy()
+                    class_id = int(box.cls[0].cpu().numpy())
+                    
+                    if confidence > 0.5:  # Confidence threshold
+                        detection = {
+                            'bbox': [x1, y1, x2, y2],
+                            'confidence': confidence,
+                            'class': self.class_names[class_id],
+                            'class_id': class_id
+                        }
+                        detections.append(detection)
+        
+        return detections
+    
+    def process_video_stream(self, video_source):
+        """Process video stream for traffic detection"""
+        cap = cv2.VideoCapture(video_source)
+        self.running = True
+        
+        while self.running:
+            ret, frame = cap.read()
+            if not ret:
+                break
+                
+            # Detect objects
+            detections = self.detect_objects(frame)
+            
+            # Count vehicles and check for emergencies
+            vehicle_count = sum(1 for d in detections 
+                              if d['class'] == 'vehicle')
+            emergency_count = sum(1 for d in detections 
+                                if d['class'] == 'emergency_vehicle')
+            person_count = sum(1 for d in detections 
+                             if d['class'] == 'person')
+            
+            # Create detection summary
+            detection_summary = {
+                'timestamp': time.time(),
+                'vehicle_count': vehicle_count,
+                'emergency_count': emergency_count,
+                'person_count': person_count,
+                'detections': detections
+            }
+            
+            # Add to queue for processing
+            self.detection_queue.put(detection_summary)
+            
+            # Draw detections on frame
+            annotated_frame = self.draw_detections(frame, detections)
+            
+            # Display frame (optional)
+            cv2.imshow('Traffic Detection', annotated_frame)
+            
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        
+        cap.release()
+        cv2.destroyAllWindows()
+    
+    def draw_detections(self, frame, detections):
+        """Draw detection bounding boxes on frame"""
+        for detection in detections:
+            bbox = detection['bbox']
+            class_name = detection['class']
+            confidence = detection['confidence']
+            
+            # Draw bounding box
+            cv2.rectangle(frame, 
+                         (int(bbox[0]), int(bbox[1])), 
+                         (int(bbox[2]), int(bbox[3])), 
+                         (0, 255, 0), 2)
+            
+            # Add label
+            label = f"{class_name}: {confidence:.2f}"
+            cv2.putText(frame, label, 
+                       (int(bbox[0]), int(bbox[1]) - 10),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, 
+                       (0, 255, 0), 2)
+        
+        return frame
+    
+    def get_detection_data(self):
+        """Get detection data from queue"""
+        if not self.detection_queue.empty():
+            return self.detection_queue.get()
+        return None
+    
+    def stop(self):
+        """Stop the detection process"""
+        self.running = False
+\end{lstlisting}
+
+\section{Hardware Integration Code}
+\label{app:hardware_integration}
+
+Arduino and NodeMCU integration for traffic light control:
+
+\begin{lstlisting}[language=C++, caption=Arduino Traffic Light Control]
+// Arduino code for traffic light control
+#include <WiFi.h>
+#include <WebServer.h>
+#include <ArduinoJson.h>
+
+// Pin definitions
+const int RED_PIN_NS = 2;
+const int YELLOW_PIN_NS = 3;
+const int GREEN_PIN_NS = 4;
+const int RED_PIN_EW = 5;
+const int YELLOW_PIN_EW = 6;
+const int GREEN_PIN_EW = 7;
+
+// WiFi credentials
+const char* ssid = "TrafficControl";
+const char* password = "traffic123";
+
+WebServer server(80);
+
+// Current state
+int currentState = 0; // 0: NS Green, 1: EW Green
+
+void setup() {
+    Serial.begin(115200);
+    
+    // Initialize pins
+    pinMode(RED_PIN_NS, OUTPUT);
+    pinMode(YELLOW_PIN_NS, OUTPUT);
+    pinMode(GREEN_PIN_NS, OUTPUT);
+    pinMode(RED_PIN_EW, OUTPUT);
+    pinMode(YELLOW_PIN_EW, OUTPUT);
+    pinMode(GREEN_PIN_EW, OUTPUT);
+    
+    // Connect to WiFi
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(1000);
+        Serial.println("Connecting to WiFi...");
+    }
+    
+    Serial.println("WiFi connected");
+    Serial.println(WiFi.localIP());
+    
+    // Setup web server routes
+    server.on("/control", HTTP_POST, handleTrafficControl);
+    server.on("/status", HTTP_GET, handleStatus);
+    server.begin();
+    
+    // Initialize traffic lights
+    setTrafficLights(0); // Start with NS green
+}
+
+void loop() {
+    server.handleClient();
+    delay(100);
+}
+
+void handleTrafficControl() {
+    if (server.hasArg("plain")) {
+        String body = server.arg("plain");
+        DynamicJsonDocument doc(1024);
+        deserializeJson(doc, body);
+        
+        int lane = doc["lane"];
+        int duration = doc["duration"];
+        bool emergency = doc["emergency"];
+        
+        if (emergency) {
+            handleEmergencyVehicle(lane);
+        } else {
+            switchTrafficLight(lane, duration);
+        }
+        
+        server.send(200, "application/json", 
+                   "{\"status\":\"success\"}");
+    } else {
+        server.send(400, "application/json", 
+                   "{\"error\":\"No data received\"}");
+    }
+}
+
+void handleStatus() {
+    DynamicJsonDocument doc(1024);
+    doc["current_state"] = currentState;
+    doc["uptime"] = millis();
+    doc["wifi_status"] = WiFi.status();
+    
+    String response;
+    serializeJson(doc, response);
+    server.send(200, "application/json", response);
+}
+
+void switchTrafficLight(int lane, int duration) {
+    // Yellow phase for current direction
+    setYellowPhase(currentState);
+    delay(3000); // 3 second yellow
+    
+    // Switch to new direction
+    currentState = lane;
+    setTrafficLights(currentState);
+    
+    Serial.print("Switched to lane: ");
+    Serial.println(lane);
+}
+
+void handleEmergencyVehicle(int lane) {
+    // Immediate switch for emergency vehicle
+    setTrafficLights(lane);
+    currentState = lane;
+    
+    Serial.print("Emergency vehicle priority: Lane ");
+    Serial.println(lane);
+}
+
+void setTrafficLights(int state) {
+    // Reset all lights
+    digitalWrite(RED_PIN_NS, LOW);
+    digitalWrite(YELLOW_PIN_NS, LOW);
+    digitalWrite(GREEN_PIN_NS, LOW);
+    digitalWrite(RED_PIN_EW, LOW);
+    digitalWrite(YELLOW_PIN_EW, LOW);
+    digitalWrite(GREEN_PIN_EW, LOW);
+    
+    if (state == 0) { // North-South Green
+        digitalWrite(GREEN_PIN_NS, HIGH);
+        digitalWrite(RED_PIN_EW, HIGH);
+    } else { // East-West Green
+        digitalWrite(RED_PIN_NS, HIGH);
+        digitalWrite(GREEN_PIN_EW, HIGH);
+    }
+}
+
+void setYellowPhase(int state) {
+    // Set yellow for current direction
+    if (state == 0) {
+        digitalWrite(GREEN_PIN_NS, LOW);
+        digitalWrite(YELLOW_PIN_NS, HIGH);
+    } else {
+        digitalWrite(GREEN_PIN_EW, LOW);
+        digitalWrite(YELLOW_PIN_EW, HIGH);
+    }
+}
+\end{lstlisting}
+
+\section{System Configuration Files}
+\label{app:config_files}
+
+\subsection{Dataset Configuration}
+\begin{lstlisting}[language=bash, caption=Dataset Configuration YAML]
+# traffic_dataset.yaml
+train: ./dataset/train/images
+val: ./dataset/val/images
+test: ./dataset/test/images
+
+# number of classes
+nc: 3
+
+# class names
+names:
+  0: vehicle
+  1: person
+  2: emergency_vehicle
+
+# class weights for imbalanced dataset
+class_weights: [1.0, 1.2, 3.0]
+
+# data augmentation
+augment: true
+mosaic: 0.5
+mixup: 0.1
+copy_paste: 0.3
+\end{lstlisting}
+
+\subsection{System Configuration}
+\begin{lstlisting}[language=bash, caption=System Configuration]
+# system_config.yaml
+traffic_control:
+  min_green_time: 30
+  max_green_time: 90
+  yellow_time: 3
+  all_red_time: 2
+  starvation_threshold: 180
+
+detection:
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+  input_size: 640
+  model_path: "./models/yolov11_traffic.pt"
+
+hardware:
+  arduino_ip: "192.168.1.100"
+  arduino_port: 80
+  communication_timeout: 5
+  retry_attempts: 3
+
+video_sources:
+  - camera_id: 0
+    location: "Shahbag"
+    rtsp_url: "rtsp://camera1.example.com/stream"
+  - camera_id: 1
+    location: "Motijheel"
+    rtsp_url: "rtsp://camera2.example.com/stream"
+
+logging:
+  level: "INFO"
+  log_file: "./logs/traffic_system.log"
+  max_file_size: "10MB"
+  backup_count: 5
+\end{lstlisting}
+
+\section{Database Schema}
+\label{app:database_schema}
+
+\begin{lstlisting}[language=SQL, caption=Database Schema for Traffic Data]
+-- Traffic management system database schema
+
+-- Table for storing traffic detection data
+CREATE TABLE traffic_detections (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    timestamp DATETIME NOT NULL,
+    camera_id INT NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    vehicle_count INT DEFAULT 0,
+    person_count INT DEFAULT 0,
+    emergency_count INT DEFAULT 0,
+    detection_data JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table for storing traffic light state changes
+CREATE TABLE traffic_light_states (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    intersection_id INT NOT NULL,
+    lane_id INT NOT NULL,
+    state VARCHAR(10) NOT NULL, -- 'green', 'yellow', 'red'
+    duration INT NOT NULL,
+    emergency_override BOOLEAN DEFAULT FALSE,
+    timestamp DATETIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table for storing emergency vehicle events
+CREATE TABLE emergency_events (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    event_type VARCHAR(50) NOT NULL, -- 'detected', 'priority_given', 'cleared'
+    camera_id INT NOT NULL,
+    location VARCHAR(100) NOT NULL,
+    vehicle_type VARCHAR(20) NOT NULL, -- 'ambulance', 'fire_truck', 'police'
+    response_time INT, -- in seconds
+    timestamp DATETIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Table for storing system performance metrics
+CREATE TABLE system_metrics (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    metric_type VARCHAR(50) NOT NULL,
+    metric_value DECIMAL(10,2) NOT NULL,
+    unit VARCHAR(20),
+    location VARCHAR(100),
+    timestamp DATETIME NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Indexes for better performance
+CREATE INDEX idx_detections_timestamp ON traffic_detections(timestamp);
+CREATE INDEX idx_detections_camera ON traffic_detections(camera_id);
+CREATE INDEX idx_light_states_timestamp ON traffic_light_states(timestamp);
+CREATE INDEX idx_emergency_timestamp ON emergency_events(timestamp);
+CREATE INDEX idx_metrics_timestamp ON system_metrics(timestamp);
+\end{lstlisting}
+
+\section{API Documentation}
+\label{app:api_documentation}
+
+\subsection{REST API Endpoints}
+
+\begin{lstlisting}[language=bash, caption=API Endpoint Documentation]
+{
+  "traffic_control_api": {
+    "base_url": "http://localhost:8000/api/v1",
+    "endpoints": {
+      "get_traffic_status": {
+        "method": "GET",
+        "path": "/traffic/status/{location}",
+        "description": "Get current traffic status for a location",
+        "parameters": {
+          "location": "string (required) - Location name"
+        },
+        "response": {
+          "location": "string",
+          "vehicle_count": "integer",
+          "person_count": "integer",
+          "emergency_count": "integer",
+          "current_signal": "string",
+          "timestamp": "datetime"
+        }
+      },
+      "set_traffic_signal": {
+        "method": "POST",
+        "path": "/traffic/signal",
+        "description": "Set traffic signal state",
+        "body": {
+          "intersection_id": "integer (required)",
+          "lane_id": "integer (required)",
+          "state": "string (required) - green|yellow|red",
+          "duration": "integer (optional) - duration in seconds",
+          "emergency": "boolean (optional) - emergency override"
+        },
+        "response": {
+          "status": "string",
+          "message": "string",
+          "timestamp": "datetime"
+        }
+      },
+      "get_detection_data": {
+        "method": "GET",
+        "path": "/detection/data",
+        "description": "Get recent detection data",
+        "parameters": {
+          "limit": "integer (optional) - number of records",
+          "camera_id": "integer (optional) - specific camera",
+          "start_time": "datetime (optional)",
+          "end_time": "datetime (optional)"
+        },
+        "response": {
+          "data": "array of detection objects",
+          "total": "integer",
+          "timestamp": "datetime"
+        }
+      }
+    }
+  }
+}
+\end{lstlisting}
+
+\section{System Architecture Diagram Code}
+\label{app:architecture_code}
+
+\begin{lstlisting}[language=Python, caption=System Architecture Visualization]
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.patches import FancyBboxPatch
+import numpy as np
+
+def create_architecture_diagram():
+    fig, ax = plt.subplots(1, 1, figsize=(14, 10))
+    
+    # Define colors
+    colors = {
+        'data': '#E8F4FD',
+        'processing': '#B8E6B8',
+        'control': '#FFE4B5',
+        'hardware': '#FFB6C1',
+        'output': '#DDA0DD'
+    }
+    
+    # Data Collection Layer
+    data_layer = FancyBboxPatch((1, 8), 12, 1.5, 
+                               boxstyle="round,pad=0.1",
+                               facecolor=colors['data'],
+                               edgecolor='black',
+                               linewidth=2)
+    ax.add_patch(data_layer)
+    ax.text(7, 8.75, 'Data Collection Layer\n(CCTV Cameras, Sensors)', 
+            ha='center', va='center', fontsize=12, weight='bold')
+    
+    # Processing Layer
+    processing_layer = FancyBboxPatch((1, 6), 12, 1.5,
+                                     boxstyle="round,pad=0.1",
+                                     facecolor=colors['processing'],
+                                     edgecolor='black',
+                                     linewidth=2)
+    ax.add_patch(processing_layer)
+    ax.text(7, 6.75, 'Processing Layer\n(YOLOv11, Object Detection, ML Models)', 
+            ha='center', va='center', fontsize=12, weight='bold')
+    
+    # Control Layer
+    control_layer = FancyBboxPatch((1, 4), 12, 1.5,
+                                  boxstyle="round,pad=0.1",
+                                  facecolor=colors['control'],
+                                  edgecolor='black',
+                                  linewidth=2)
+    ax.add_patch(control_layer)
+    ax.text(7, 4.75, 'Control Layer\n(WJF Algorithm, Traffic Logic, Emergency Handling)', 
+            ha='center', va='center', fontsize=12, weight='bold')
+    
+    # Hardware Layer
+    hardware_layer = FancyBboxPatch((1, 2), 12, 1.5,
+                                   boxstyle="round,pad=0.1",
+                                   facecolor=colors['hardware'],
+                                   edgecolor='black',
+                                   linewidth=2)
+    ax.add_patch(hardware_layer)
+    ax.text(7, 2.75, 'Hardware Layer\n(Arduino, Raspberry Pi, NodeMCU)', 
+            ha='center', va='center', fontsize=12, weight='bold')
+    
+    # Output Layer
+    output_layer = FancyBboxPatch((1, 0), 12, 1.5,
+                                 boxstyle="round,pad=0.1",
+                                 facecolor=colors['output'],
+                                 edgecolor='black',
+                                 linewidth=2)
+    ax.add_patch(output_layer)
+    ax.text(7, 0.75, 'Output Layer\n(Traffic Lights, Displays, Monitoring Dashboard)', 
+            ha='center', va='center', fontsize=12, weight='bold')
+    
+    # Add arrows between layers
+    arrow_props = dict(arrowstyle='->', connectionstyle='arc3', 
+                      lw=2, color='black')
+    
+    # Arrows going down
+    ax.annotate('', xy=(7, 7.5), xytext=(7, 8),
+                arrowprops=arrow_props)
+    ax.annotate('', xy=(7, 5.5), xytext=(7, 6),
+                arrowprops=arrow_props)
+    ax.annotate('', xy=(7, 3.5), xytext=(7, 4),
+                arrowprops=arrow_props)
+    ax.annotate('', xy=(7, 1.5), xytext=(7, 2),
+                arrowprops=arrow_props)
+    
+    # Add feedback arrows
+    ax.annotate('', xy=(10, 4), xytext=(10, 2),
+                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0.3',
+                              lw=1.5, color='red', linestyle='dashed'))
+    ax.text(11, 3, 'Feedback', ha='center', va='center', 
+            fontsize=10, color='red', style='italic')
+    
+    ax.set_xlim(0, 14)
+    ax.set_ylim(-0.5, 10)
+    ax.set_aspect('equal')
+    ax.axis('off')
+    ax.set_title('Traffic Management System Architecture', 
+                fontsize=16, weight='bold', pad=20)
+    
+    plt.tight_layout()
+    plt.savefig('system_architecture.png', dpi=300, bbox_inches='tight')
+    plt.show()
+
+# Generate the diagram
+create_architecture_diagram()
+\end{lstlisting}
+
+This appendix provides comprehensive code samples and technical implementation details that demonstrate the practical aspects of the traffic management system. The code examples cover all major components including machine learning model training, traffic control algorithms, hardware integration, and system configuration. 

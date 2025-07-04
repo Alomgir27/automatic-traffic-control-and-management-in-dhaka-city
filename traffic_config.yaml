@@ -1,0 +1,68 @@
+dataset:
+  path: "archive/yolov"
+  train: "images/train"
+  val: "images/val"
+  nc: 21
+  names:
+    - "ambulance"
+    - "auto rickshaw"
+    - "bicycle"
+    - "bus"
+    - "car"
+    - "garbagevan"
+    - "human hauler"
+    - "minibus"
+    - "minivan"
+    - "motorbike"
+    - "Pickup"
+    - "army vehicle"
+    - "policecar"
+    - "rickshaw"
+    - "scooter"
+    - "suv"
+    - "taxi"
+    - "three wheelers (CNG)"
+    - "truck"
+    - "van"
+    - "wheelbarrow"
+
+training:
+  epochs: 150
+  batch_size: 16
+  imgsz: 640
+  lr0: 0.01
+  lrf: 0.01
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+  patience: 50
+  save_period: 10
+  workers: 8
+  device: "auto"
+
+augmentation:
+  hsv_h: 0.015
+  hsv_s: 0.7
+  hsv_v: 0.4
+  degrees: 0.0
+  translate: 0.1
+  scale: 0.5
+  shear: 0.0
+  perspective: 0.0
+  flipud: 0.0
+  fliplr: 0.5
+  mosaic: 1.0
+  mixup: 0.0
+  copy_paste: 0.0
+
+models:
+  yolo11n: "yolo11n.pt"
+  yolo11s: "yolo11s.pt"
+  yolo11m: "yolo11m.pt"
+  yolo11l: "yolo11l.pt"
+  yolo11x: "yolo11x.pt" 

@@ -1,0 +1,256 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{3}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{18}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Background and Motivation}{18}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Problem Statement}{19}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Research Objectives}{20}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Primary Objectives}{20}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Secondary Objectives}{21}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Scope and Limitations}{22}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Scope}{22}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Limitations}{22}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Research Methodology Overview}{23}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Expected Contributions}{24}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Thesis Organization}{24}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Literature Review}{26}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{26}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Traditional Traffic Management Systems}{26}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Fixed-Time Traffic Signal Systems}{26}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Actuated Traffic Signal Systems}{27}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Machine Learning in Traffic Management}{27}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Deep Learning Approaches}{27}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Object Detection in Traffic Management}{28}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Traffic Flow Prediction}{28}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Emergency Vehicle Prioritization}{29}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Priority-Based Traffic Management}{29}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Emergency Vehicle Detection Systems}{29}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}IoT-Enabled Traffic Management}{30}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Internet of Things in Transportation}{30}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Connected Vehicle Systems}{30}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Traffic Management in Developing Countries}{31}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Challenges in Developing Urban Areas}{31}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Adaptive Solutions for Developing Countries}{31}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Performance Evaluation in Traffic Management}{32}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Metrics and Evaluation Criteria}{32}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Simulation vs. Real-World Testing}{32}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Research Gaps and Opportunities}{33}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Identified Research Gaps}{33}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Opportunities for Innovation}{33}{subsection.2.8.2}%
+\contentsline {section}{\numberline {2.9}Positioning of Current Research}{34}{section.2.9}%
+\contentsline {section}{\numberline {2.10}Summary}{35}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Methodology}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{36}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Research Design and Approach}{36}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Overall Research Framework}{36}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Research Methodology Type}{37}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Data Collection Methodology}{37}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Data Collection Strategy}{37}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Data Collection Sites}{38}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Data Collection Process}{38}{subsection.3.3.3}%
+\contentsline {subsubsection}{Equipment and Setup}{38}{section*.5}%
+\contentsline {subsubsection}{Temporal Coverage}{39}{section*.6}%
+\contentsline {subsection}{\numberline {3.3.4}Dataset Composition}{39}{subsection.3.3.4}%
+\contentsline {subsubsection}{Vehicle Categories}{40}{section*.8}%
+\contentsline {section}{\numberline {3.4}Data Preprocessing and Annotation}{40}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Image Preprocessing}{40}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Annotation Process}{41}{subsection.3.4.2}%
+\contentsline {subsubsection}{Annotation Tools}{41}{section*.9}%
+\contentsline {subsubsection}{Annotation Standards}{41}{section*.10}%
+\contentsline {subsubsection}{Annotation Quality Assurance}{42}{section*.11}%
+\contentsline {section}{\numberline {3.5}Machine Learning Model Development}{42}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}YOLOv11 Architecture Selection}{42}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Model Training Strategy}{42}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Model Optimization}{43}{subsection.3.5.3}%
+\contentsline {subsubsection}{Hyperparameter Optimization}{43}{section*.13}%
+\contentsline {subsubsection}{Model Validation}{43}{section*.14}%
+\contentsline {section}{\numberline {3.6}System Architecture Design}{44}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Overall System Architecture}{44}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Algorithm Design}{44}{subsection.3.6.2}%
+\contentsline {subsubsection}{Emergency Vehicle Prioritization Algorithm}{44}{section*.15}%
+\contentsline {subsubsection}{Weighted Job First (WJF) Scheduling}{45}{section*.16}%
+\contentsline {subsection}{\numberline {3.6.3}IoT Integration Architecture}{46}{subsection.3.6.3}%
+\contentsline {section}{\numberline {3.7}Evaluation Methodology}{46}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Performance Metrics}{46}{subsection.3.7.1}%
+\contentsline {subsubsection}{Object Detection Metrics}{46}{section*.17}%
+\contentsline {subsubsection}{Traffic Management Metrics}{47}{section*.18}%
+\contentsline {subsection}{\numberline {3.7.2}Experimental Setup}{47}{subsection.3.7.2}%
+\contentsline {subsubsection}{Hardware Configuration}{47}{section*.19}%
+\contentsline {subsubsection}{Software Environment}{47}{section*.20}%
+\contentsline {subsection}{\numberline {3.7.3}Evaluation Approach}{48}{subsection.3.7.3}%
+\contentsline {subsubsection}{Baseline Comparison}{48}{section*.21}%
+\contentsline {subsubsection}{Statistical Analysis}{48}{section*.22}%
+\contentsline {section}{\numberline {3.8}Ethical Considerations}{48}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Privacy Protection}{48}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Regulatory Compliance}{49}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Summary}{49}{section.3.9}%
+\contentsline {chapter}{\numberline {4}System Design}{50}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{50}{section.4.1}%
+\contentsline {section}{\numberline {4.2}System Architecture Overview}{50}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}High-Level Architecture}{50}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}System Components}{51}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Data Acquisition Layer}{52}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Video Capture Module}{52}{subsection.4.3.1}%
+\contentsline {subsubsection}{Camera Specifications}{52}{section*.24}%
+\contentsline {subsubsection}{Camera Placement Strategy}{52}{section*.26}%
+\contentsline {subsection}{\numberline {4.3.2}Data Preprocessing Module}{53}{subsection.4.3.2}%
+\contentsline {subsubsection}{Frame Extraction}{53}{section*.27}%
+\contentsline {subsubsection}{Image Enhancement}{53}{section*.28}%
+\contentsline {section}{\numberline {4.4}Processing Layer}{54}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Object Detection Module}{54}{subsection.4.4.1}%
+\contentsline {subsubsection}{YOLOv11 Implementation}{54}{section*.29}%
+\contentsline {subsubsection}{Detection Pipeline}{54}{section*.31}%
+\contentsline {subsection}{\numberline {4.4.2}Traffic Analysis Module}{55}{subsection.4.4.2}%
+\contentsline {subsubsection}{Vehicle Counting and Classification}{55}{section*.32}%
+\contentsline {subsubsection}{Traffic Flow Analysis}{55}{section*.33}%
+\contentsline {subsection}{\numberline {4.4.3}Decision Engine}{56}{subsection.4.4.3}%
+\contentsline {subsubsection}{Emergency Vehicle Prioritization}{56}{section*.34}%
+\contentsline {subsubsection}{Normal Traffic Control Algorithm}{57}{section*.35}%
+\contentsline {section}{\numberline {4.5}Control Layer}{58}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Hardware Interface Module}{58}{subsection.4.5.1}%
+\contentsline {subsubsection}{Microcontroller Integration}{58}{section*.36}%
+\contentsline {subsubsection}{Signal Control Interface}{59}{section*.38}%
+\contentsline {subsection}{\numberline {4.5.2}Communication Protocols}{59}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}System Integration}{60}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Data Flow Architecture}{60}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Message Passing System}{60}{subsection.4.6.2}%
+\contentsline {section}{\numberline {4.7}Performance Optimization}{60}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Real-Time Processing Optimization}{60}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Memory Management}{61}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Fault Tolerance and Reliability}{61}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Redundancy Mechanisms}{61}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Error Handling}{61}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Security and Privacy}{62}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Data Security}{62}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Privacy Protection}{62}{subsection.4.9.2}%
+\contentsline {section}{\numberline {4.10}Scalability and Extensibility}{63}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Scalability Features}{63}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Extensibility Options}{63}{subsection.4.10.2}%
+\contentsline {section}{\numberline {4.11}Summary}{63}{section.4.11}%
+\contentsline {chapter}{\numberline {5}Implementation}{65}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{65}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Development Environment}{65}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Hardware Environment}{65}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Software Environment}{66}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}YOLOv11 Model Implementation}{66}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Training Configuration}{66}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Data Preprocessing}{66}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}System Architecture Implementation}{67}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Core Components}{67}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Emergency Vehicle Prioritization}{67}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}IoT Hardware Integration}{67}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Microcontroller Support}{67}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Communication Protocols}{68}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Performance Optimization}{68}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Real-Time Processing}{68}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Latency Minimization}{69}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Security Implementation}{69}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Data Security}{69}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Privacy Protection}{69}{subsection.5.7.2}%
+\contentsline {section}{\numberline {5.8}Testing and Validation}{70}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}System Testing}{70}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Validation Metrics}{70}{subsection.5.8.2}%
+\contentsline {section}{\numberline {5.9}Deployment Strategy}{70}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Containerization}{70}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Scalability Features}{71}{subsection.5.9.2}%
+\contentsline {section}{\numberline {5.10}Summary}{71}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Results and Analysis}{72}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Dataset Overview and Preparation}{72}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Dataset Composition}{72}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Data Collection Strategy}{73}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Model Performance Evaluation}{74}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Training Process and Optimization}{74}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Confusion Matrix Analysis}{74}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Performance Analysis by Category}{75}{subsection.6.2.3}%
+\contentsline {subsubsection}{Regular Vehicle Detection}{75}{section*.46}%
+\contentsline {subsubsection}{Pedestrian Detection}{75}{section*.47}%
+\contentsline {subsubsection}{Emergency Vehicle Detection}{75}{section*.48}%
+\contentsline {section}{\numberline {6.3}System Performance Metrics}{76}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Traffic Flow Optimization Results}{76}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Emergency Vehicle Response Time Analysis}{76}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Lane Starvation Prevention}{77}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Real-World Implementation Results}{77}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Deployment Locations and Setup}{77}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}System Reliability and Uptime}{78}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}User Satisfaction and Feedback}{78}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Economic Impact Analysis}{79}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Cost-Benefit Analysis}{79}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Environmental Impact}{79}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}Comparative Analysis}{80}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Comparison with Traditional Systems}{80}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Comparison with Other Intelligent Systems}{80}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Chapter Summary}{81}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Discussion}{82}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Analysis of Key Findings}{82}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Machine Learning Model Performance}{82}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Traffic Flow Optimization Impact}{83}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Emergency Vehicle Prioritization Success}{84}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}Implications for Urban Traffic Management}{84}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Technology Integration in Developing Cities}{84}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Economic Viability and Sustainability}{85}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Scalability Considerations}{85}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Limitations and Challenges}{85}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Dataset Limitations}{85}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Technical Limitations}{86}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Implementation Challenges}{86}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}Comparison with Global Best Practices}{87}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Performance Benchmarking}{87}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Adaptation to Local Conditions}{87}{subsection.7.4.2}%
+\contentsline {section}{\numberline {7.5}Contributions to the Field}{88}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Theoretical Contributions}{88}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Practical Contributions}{88}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Methodological Contributions}{89}{subsection.7.5.3}%
+\contentsline {section}{\numberline {7.6}Future Research Directions}{89}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Technical Enhancements}{89}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}System Integration}{90}{subsection.7.6.2}%
+\contentsline {subsection}{\numberline {7.6.3}Evaluation and Validation}{90}{subsection.7.6.3}%
+\contentsline {section}{\numberline {7.7}Policy and Implementation Implications}{90}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Regulatory Considerations}{90}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Implementation Strategy}{91}{subsection.7.7.2}%
+\contentsline {section}{\numberline {7.8}Chapter Summary}{91}{section.7.8}%
+\contentsline {chapter}{\numberline {8}Conclusion and Future Work}{93}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Research Summary}{93}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Problem Statement Addressed}{93}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Methodology and Approach}{94}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Key Achievements and Contributions}{94}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Technical Achievements}{95}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Performance Improvements}{95}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Economic and Environmental Impact}{96}{subsection.8.2.3}%
+\contentsline {section}{\numberline {8.3}Theoretical Contributions}{96}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Novel Integration Approach}{96}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Algorithmic Innovation}{96}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Adaptation to Developing Urban Contexts}{97}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Practical Contributions}{97}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Cost-effective Implementation}{97}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Comprehensive Evaluation Framework}{97}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Real-world Validation}{97}{subsection.8.4.3}%
+\contentsline {section}{\numberline {8.5}Limitations and Challenges}{98}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Dataset Constraints}{98}{subsection.8.5.1}%
+\contentsline {subsection}{\numberline {8.5.2}Technical Limitations}{98}{subsection.8.5.2}%
+\contentsline {subsection}{\numberline {8.5.3}Implementation Scope}{98}{subsection.8.5.3}%
+\contentsline {section}{\numberline {8.6}Future Research Directions}{99}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Technical Enhancements}{99}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}System Integration and Scalability}{99}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Advanced Research Areas}{100}{subsection.8.6.3}%
+\contentsline {section}{\numberline {8.7}Policy and Implementation Recommendations}{100}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Gradual Implementation Strategy}{101}{subsection.8.7.1}%
+\contentsline {subsection}{\numberline {8.7.2}Regulatory Framework Development}{101}{subsection.8.7.2}%
+\contentsline {subsection}{\numberline {8.7.3}Capacity Building}{101}{subsection.8.7.3}%
+\contentsline {subsection}{\numberline {8.7.4}Public-Private Partnerships}{101}{subsection.8.7.4}%
+\contentsline {section}{\numberline {8.8}Broader Implications}{101}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Developing Cities Applications}{102}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Sustainable Urban Development}{102}{subsection.8.8.2}%
+\contentsline {subsection}{\numberline {8.8.3}Technology Transfer}{102}{subsection.8.8.3}%
+\contentsline {section}{\numberline {8.9}Final Reflections}{102}{section.8.9}%
+\contentsline {section}{\numberline {8.10}Conclusion}{103}{section.8.10}%
+\contentsline {chapter}{\numberline {A}Code Samples and Technical Implementation}{113}{appendix.A}%
+\contentsline {section}{\numberline {A.1}YOLOv11 Model Training Code}{113}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Traffic Control Algorithm Implementation}{115}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Object Detection and Classification}{118}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Hardware Integration Code}{123}{section.A.4}%
+\contentsline {section}{\numberline {A.5}System Configuration Files}{128}{section.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}Dataset Configuration}{128}{subsection.A.5.1}%
+\contentsline {subsection}{\numberline {A.5.2}System Configuration}{128}{subsection.A.5.2}%
+\contentsline {section}{\numberline {A.6}Database Schema}{130}{section.A.6}%
+\contentsline {section}{\numberline {A.7}API Documentation}{132}{section.A.7}%
+\contentsline {subsection}{\numberline {A.7.1}REST API Endpoints}{132}{subsection.A.7.1}%
+\contentsline {section}{\numberline {A.8}System Architecture Diagram Code}{134}{section.A.8}%

@@ -1,0 +1,22 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Traffic congestion and inefficient traffic management present significant challenges for urban areas in developing nations, particularly in Dhaka, Bangladesh. The rapid pace of urbanization, limited road infrastructure, and the high density of mixed traffic—consisting of rickshaws, motorcycles, buses, cars, and other vehicles—contribute to severe congestion and delays. This thesis proposes an IoT-enabled traffic management system that integrates the YOLOv11 (You Only Look Once) Machine Learning model for real-time detection and classification of vehicles, pedestrians, and emergency vehicles, facilitating intelligent traffic signal adjustments based on traffic density and emergency vehicle presence.
+
+The system leverages live video streams from CCTV cameras to monitor traffic conditions continuously. The narrow roads of Dhaka city, unpredictable traffic patterns, and frequent rule violations exacerbate traffic congestion. This often causes drivers to become impatient and make dangerous maneuvers, leading to missed appointments, delayed classes, and wasted time in daily life. By automatically minimizing vehicle starvation and implementing emergency vehicle prioritization, the system aims to reduce unnecessary vehicle waiting times, enhance road safety, and ensure more efficient traffic flow.
+
+The proposed methodology begins with the collection of real-time traffic data from strategically selected key junctions across Dhaka city, including Shahbag, Polton, Motijheel, Science Lab, Panthapath, Bijoy Sarani, and Gulistan. A comprehensive dataset of 3,784 images was collected and meticulously annotated, categorizing 171,436 objects into three distinct categories: Regular Vehicles, Emergency Vehicles, and Pedestrians. The YOLOv11 object detection model, renowned for its speed and accuracy in real-time applications, was trained on this annotated dataset and integrated into the traffic monitoring system.
+
+The system's primary features include dynamic traffic signal control, which analyzes traffic density in real-time and adjusts signals to optimize flow and reduce congestion. A starvation management mechanism ensures that no lane is unduly delayed, giving every lane a fair opportunity to proceed. Emergency vehicle prioritization automatically detects ambulances, fire trucks, and police vehicles, immediately adjusting traffic signals to prioritize their passage through intersections.
+
+The traffic management system implements a Weighted Job First (WJF) scheduling algorithm for non-emergency traffic, assigning priority weights to each lane based on vehicle count, pedestrian activity, and elapsed time since the lane was last opened. The system incorporates minimum and maximum time limits for each lane's signal duration, automatically adjusted based on real-time traffic conditions.
+
+Hardware integration is achieved through microcontrollers such as Arduino, Raspberry Pi, and NodeMCU, which interface between the machine learning algorithms and physical traffic signal infrastructure. The system operates within a continuous feedback loop, ensuring that traffic control decisions are always informed by the most current data and can adapt to sudden changes in traffic conditions.
+
+Experimental results demonstrate significant improvements in traffic efficiency and safety. The trained YOLOv11 model achieved an accuracy of 79\% (mAP50) on the custom Dhaka traffic dataset, with the system reducing average vehicle wait times by 33\% and emergency vehicle response times by 56\%. The system successfully prevented lane starvation and adapted well to Dhaka's unpredictable traffic patterns, including sudden surges caused by events or road closures.
+
+The proposed solution provides a scalable, cost-effective approach to traffic management that can be adapted to other developing urban areas facing similar traffic congestion challenges. Through the integration of real-time data processing, machine learning, and IoT technologies, the system offers an automated solution to persistent traffic problems in Dhaka and beyond. The research contributes to the field of intelligent transportation systems by demonstrating the effectiveness of machine learning-based traffic management in complex urban environments with mixed traffic conditions.
+
+\textbf{Keywords:} Traffic Management, Machine Learning, YOLOv11, Emergency Vehicle Prioritization, IoT, Urban Transportation, Computer Vision, Real-time Object Detection, Smart City, Dhaka Traffic
+
+\newpage 
