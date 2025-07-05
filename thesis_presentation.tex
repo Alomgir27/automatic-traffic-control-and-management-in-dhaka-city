@@ -39,6 +39,7 @@
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{tikz}
+\usetikzlibrary{positioning,calc}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
@@ -79,7 +80,16 @@
 
 % Outline
 \begin{frame}{Outline}
-    \tableofcontents
+    \begin{itemize}
+        \item \textbf{Problem Statement}
+        \item \textbf{Research Objectives}  
+        \item \textbf{Methodology}
+        \item \textbf{Results}
+        \item \textbf{Implementation Challenges}
+        \item \textbf{Economic Impact}
+        \item \textbf{Conclusions}
+        \item \textbf{Future Work}
+    \end{itemize}
 \end{frame}
 
 \section{Problem Statement}
@@ -231,18 +241,30 @@
 
 \begin{frame}{Research Methodology Overview}
     \begin{center}
-        \begin{tikzpicture}[scale=0.9]
-            \node[draw, rectangle, minimum width=2.5cm, minimum height=1cm] (data) at (0,2) {Data Collection};
-            \node[draw, rectangle, minimum width=2.5cm, minimum height=1cm] (model) at (3,2) {Model Development};
-            \node[draw, rectangle, minimum width=2.5cm, minimum height=1cm] (system) at (6,2) {System Design};
-            \node[draw, rectangle, minimum width=2.5cm, minimum height=1cm] (impl) at (3,0) {Implementation};
-            \node[draw, rectangle, minimum width=2.5cm, minimum height=1cm] (eval) at (6,0) {Evaluation};
+        \begin{tikzpicture}[
+            scale=0.9,
+            box/.style={draw, rectangle, minimum width=2.8cm, minimum height=1.2cm, 
+                       fill=lightblue!30, rounded corners=2pt, thick},
+            arrow/.style={->, thick, color=darkblue}
+        ]
+            \node[box] (data) at (0,2.5) {\textbf{Data Collection}};
+            \node[box] (model) at (4,2.5) {\textbf{Model Development}};
+            \node[box] (system) at (8,2.5) {\textbf{System Design}};
+            \node[box] (impl) at (4,0) {\textbf{Implementation}};
+            \node[box] (eval) at (8,0) {\textbf{Evaluation}};
             
-            \draw[->] (data) -- (model);
-            \draw[->] (model) -- (system);
-            \draw[->] (system) -- (impl);
-            \draw[->] (impl) -- (eval);
-            \draw[->] (model) -- (impl);
+            \draw[arrow] (data) -- (model);
+            \draw[arrow] (model) -- (system);
+            \draw[arrow] (system) -- (impl);
+            \draw[arrow] (impl) -- (eval);
+            \draw[arrow] (model) -- (impl);
+            
+            % Add phase numbers
+            \node[above=2pt of data] {\small\textcolor{red}{\textbf{Phase 1}}};
+            \node[above=2pt of model] {\small\textcolor{red}{\textbf{Phase 2}}};
+            \node[above=2pt of system] {\small\textcolor{red}{\textbf{Phase 3}}};
+            \node[above=2pt of impl] {\small\textcolor{red}{\textbf{Phase 4}}};
+            \node[above=2pt of eval] {\small\textcolor{red}{\textbf{Phase 5}}};
         \end{tikzpicture}
     \end{center}
     
@@ -294,34 +316,37 @@
 \end{frame}
 
 \begin{frame}{System Architecture}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{center}
-                \begin{tikzpicture}[scale=0.7]
-                    \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (camera) at (0,3) {CCTV Camera};
-                    \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (yolo) at (0,1.5) {YOLOv11 Model};
-                    \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (controller) at (0,0) {Traffic Controller};
-                    \node[draw, rectangle, minimum width=2cm, minimum height=1cm] (signals) at (0,-1.5) {Traffic Signals};
-                    
-                    \draw[->] (camera) -- (yolo);
-                    \draw[->] (yolo) -- (controller);
-                    \draw[->] (controller) -- (signals);
-                    
-                    \node[right] at (2.5,3) {Live Video Stream};
-                    \node[right] at (2.5,1.5) {Object Detection};
-                    \node[right] at (2.5,0) {WJF Algorithm};
-                    \node[right] at (2.5,-1.5) {Signal Control};
-                \end{tikzpicture}
-            \end{center}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=0.9\textwidth]{thesis_final/figures/8.png}
-                \caption{System Architecture Diagram}
-            \end{figure}
-        \end{column}
-    \end{columns}
+    \begin{center}
+        \begin{tikzpicture}[
+            node distance=2cm,
+            box/.style={rectangle, draw, fill=lightblue!20, minimum width=3cm, minimum height=1cm, 
+                       rounded corners=5pt, thick, align=center},
+            arrow/.style={->, thick, color=darkblue}
+        ]
+            % Main flow
+            \node[box] (camera) {\textbf{CCTV Camera}\\{\small Live Video Feed}};
+            \node[box, below=of camera] (detection) {\textbf{YOLOv11 Detection}\\{\small Object Recognition}};
+            \node[box, below=of detection] (decision) {\textbf{Decision Engine}\\{\small WJF Algorithm}};
+            \node[box, below=of decision] (control) {\textbf{Signal Control}\\{\small Hardware Interface}};
+            
+            % Side components
+            \node[box, right=3cm of detection] (emergency) {\textbf{Emergency Detection}\\{\small Priority Override}};
+            \node[box, left=3cm of decision] (database) {\textbf{Traffic Database}\\{\small Historical Data}};
+            
+            % Arrows
+            \draw[arrow] (camera) -- (detection);
+            \draw[arrow] (detection) -- (decision);
+            \draw[arrow] (decision) -- (control);
+            \draw[arrow] (detection) -- (emergency);
+            \draw[arrow] (emergency) -- (decision);
+            \draw[arrow] (database) -- (decision);
+            
+            % Labels
+            \node[right, color=darkblue] at ($(camera)!0.5!(detection)$) {\small Video Stream};
+            \node[right, color=darkblue] at ($(detection)!0.5!(decision)$) {\small Vehicle Count};
+            \node[right, color=darkblue] at ($(decision)!0.5!(control)$) {\small Signal Timing};
+        \end{tikzpicture}
+    \end{center}
 \end{frame}
 
 \begin{frame}{YOLOv11 Model Architecture}
@@ -671,13 +696,16 @@
             \begin{axis}[
                 ybar,
                 width=9cm,
-                height=2.5cm,
+                height=3cm,
                 ylabel={\footnotesize Count (thousands)},
                 symbolic x coords={Regular,Pedestrians,Emergency},
                 xlabel={\footnotesize Object Categories},
                 xtick=data,
                 nodes near coords,
                 nodes near coords align={vertical},
+                bar width=20pt,
+                fill=lightblue!60,
+                text=black,
             ]
             \addplot coordinates {
                 (Regular,107)
@@ -766,20 +794,25 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Questions \& Discussion}
+\begin{frame}[plain]
     \begin{center}
-        \Huge Thank You!
+        \vspace{1cm}
+        {\Huge \textcolor{darkblue}{\textbf{Thank You!}}}
         
         \vspace{1cm}
-        \Large Questions \& Discussion
+        {\Large \textcolor{darkblue}{\textbf{Questions \& Discussion}}}
         
         \vspace{1cm}
-        \normalsize
-        \textbf{Contact:}\\
-        Alomgir Hossain \& Saied Afnan\\
-        Department of Computer Science and Engineering\\
-        Shahjalal University of Science and Technology\\
-        \texttt{alomgir.cse@sust.edu}
+        \begin{tikzpicture}
+            \node[draw, rectangle, fill=lightblue!20, rounded corners=10pt, 
+                  minimum width=8cm, minimum height=3cm, align=center] {
+                \textbf{Contact Information:}\\[0.5cm]
+                \textbf{Alomgir Hossain \& Saied Afnan}\\
+                Department of Computer Science and Engineering\\
+                Shahjalal University of Science and Technology\\
+                \texttt{alomgir.cse@sust.edu}
+            };
+        \end{tikzpicture}
     \end{center}
 \end{frame}
 
