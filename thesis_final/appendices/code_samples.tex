@@ -1,0 +1,307 @@
+\chapter{Code Samples and Technical Implementation}
+\label{app:code_samples}
+
+This appendix provides key code implementations and technical specifications that support the main thesis content.
+
+\section{Core Implementation}
+\label{app:core_implementation}
+
+\subsection{YOLOv11 Training Module}
+\label{app:yolo_training}
+
+\begin{lstlisting}[language=Python, caption=YOLOv11 Training Implementation, label=lst:yolo_training]
+from ultralytics import YOLO
+import yaml, torch
+
+class DhakaTrafficTrainer:
+    def __init__(self, config_path='config/training_config.yaml'):
+        with open(config_path, 'r') as file:
+            self.config = yaml.safe_load(file)
+        self.model = None
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        
+    def train_model(self):
+        self.model = YOLO('yolo11m.pt')
+        results = self.model.train(
+            data=self.config['data_path'],
+            epochs=self.config['epochs'],
+            imgsz=self.config['image_size'],
+            batch=self.config['batch_size'],
+            device=self.device
+        )
+        return results
+        
+    def export_model(self, format='onnx'):
+        self.model.export(format=format)
+        print(f"Model exported in {format} format")
+\end{lstlisting}
+
+\subsection{Traffic Signal Control Algorithm}
+\label{app:signal_control}
+
+\begin{lstlisting}[language=Python, caption=WJF-based Traffic Signal Controller, label=lst:signal_control]
+import numpy as np
+from collections import deque
+
+class TrafficSignalController:
+    def __init__(self, num_lanes=4):
+        self.num_lanes = num_lanes
+        self.wait_times = np.zeros(num_lanes)
+        self.emergency_override = False
+        self.alpha, self.beta = 0.7, 0.3  # WJF weights
+        
+    def calculate_priority_scores(self, vehicle_counts):
+        normalized_counts = vehicle_counts / max(vehicle_counts.max(), 1)
+        normalized_waits = self.wait_times / max(self.wait_times.max(), 1)
+        return self.alpha * normalized_counts + self.beta * normalized_waits
+    
+    def detect_emergency_vehicle(self, detections):
+        emergency_classes = ['ambulance', 'police_car', 'fire_truck']
+        for detection in detections:
+            if detection['class'] in emergency_classes:
+                return True, detection['lane']
+        return False, None
+    
+    def update_signal_timing(self, vehicle_counts, emergency_detections):
+        has_emergency, emergency_lane = self.detect_emergency_vehicle(emergency_detections)
+        
+        if has_emergency:
+            return emergency_lane, 60  # Emergency priority
+        else:
+            priority_scores = self.calculate_priority_scores(vehicle_counts)
+            next_lane = np.argmax(priority_scores)
+            green_time = min(30 + vehicle_counts[next_lane] * 2, 90)
+            return next_lane, green_time
+\end{lstlisting}
+
+\subsection{Arduino IoT Interface}
+\label{app:iot_interface}
+
+\begin{lstlisting}[language=C++, caption=Arduino Traffic Signal Controller, label=lst:arduino_code]
+#include <WiFi.h>
+#include <WebSocketsClient.h>
+#include <ArduinoJson.h>
+
+const int RED_PINS[4] = {2, 5, 8, 11};
+const int GREEN_PINS[4] = {4, 7, 10, 13};
+
+struct TrafficState {
+  int activeLane;
+  bool emergencyMode;
+} currentState = {0, false};
+
+WebSocketsClient webSocket;
+
+void setup() {
+  Serial.begin(115200);
+  
+  // Initialize LED pins
+  for (int i = 0; i < 4; i++) {
+    pinMode(RED_PINS[i], OUTPUT);
+    pinMode(GREEN_PINS[i], OUTPUT);
+  }
+  
+  // Connect to WiFi and WebSocket
+  WiFi.begin("TRAFFIC_NETWORK", "PASSWORD");
+  while (WiFi.status() != WL_CONNECTED) delay(1000);
+  
+  webSocket.begin("192.168.1.100", 8080, "/");
+  webSocket.onEvent(webSocketEvent);
+}
+
+void loop() {
+  webSocket.loop();
+  updateTrafficSignals();
+  delay(100);
+}
+
+void webSocketEvent(WStype_t type, uint8_t * payload, size_t length) {
+  if (type == WStype_TEXT) {
+    parseSignalCommand((char*)payload);
+  }
+}
+
+void parseSignalCommand(const char* json) {
+  DynamicJsonDocument doc(512);
+  deserializeJson(doc, json);
+  
+  currentState.activeLane = doc["active_lane"];
+  currentState.emergencyMode = doc["emergency"];
+}
+
+void updateTrafficSignals() {
+  // Set all to red, then activate green lane
+  for (int i = 0; i < 4; i++) {
+    digitalWrite(RED_PINS[i], HIGH);
+    digitalWrite(GREEN_PINS[i], LOW);
+  }
+  
+  if (currentState.activeLane >= 0 && currentState.activeLane < 4) {
+    digitalWrite(RED_PINS[currentState.activeLane], LOW);
+    digitalWrite(GREEN_PINS[currentState.activeLane], HIGH);
+  }
+}
+\end{lstlisting}
+
+\section{Configuration and Deployment}
+\label{app:config_deployment}
+
+\subsection{System Configuration}
+
+\begin{lstlisting}[language=bash, caption=Training Configuration, label=lst:training_config]
+# training_config.yaml
+data_path: 'datasets/dhaka_traffic/data.yaml'
+epochs: 256
+image_size: 640
+batch_size: 16
+learning_rate: 0.01
+optimizer: 'AdamW'
+
+# Model parameters
+model:
+  variant: 'yolo11m'
+  classes: 21
+  confidence_threshold: 0.5
+  nms_threshold: 0.45
+
+# Data augmentation
+augmentation:
+  mosaic: 1.0
+  mixup: 0.1
+  degrees: 10.0
+  translate: 0.2
+  scale: 0.9
+  flipud: 0.5
+  fliplr: 0.5
+\end{lstlisting}
+
+\begin{lstlisting}[language=bash, caption=Dataset Configuration, label=lst:dataset_config]
+# data.yaml
+path: ../datasets/dhaka_traffic
+train: images/train
+val: images/val
+test: images/test
+
+# Classes (21 total)
+nc: 21
+names: ['ambulance', 'auto_rickshaw', 'bicycle', 'bus', 'car',
+        'garbage_van', 'human_hauler', 'minibus', 'minivan',
+        'motorbike', 'pickup', 'police_car', 'rickshaw',
+        'scooter', 'suv', 'taxi', 'three_wheeler', 'truck',
+        'van', 'wheelbarrow', 'person']
+
+# Emergency vehicle classes
+emergency_classes: ['ambulance', 'police_car', 'fire_truck']
+
+# Dataset statistics
+total_images: 3784
+total_annotations: 171436
+\end{lstlisting}
+
+\subsection{Real-time Detection Module}
+
+\begin{lstlisting}[language=Python, caption=Real-time Detection System, label=lst:detection_system]
+import cv2, torch, threading, queue
+from ultralytics import YOLO
+
+class RealTimeDetector:
+    def __init__(self, model_path, camera_sources):
+        self.model = YOLO(model_path)
+        self.camera_sources = camera_sources
+        self.detection_queues = [queue.Queue() for _ in camera_sources]
+        self.running = False
+        
+    def process_camera_feed(self, source, camera_id):
+        cap = cv2.VideoCapture(source)
+        
+        while self.running:
+            ret, frame = cap.read()
+            if not ret: continue
+            
+            results = self.model(frame)
+            detections = self.parse_detections(results[0])
+            
+            self.detection_queues[camera_id].put({
+                'timestamp': time.time(),
+                'camera_id': camera_id,
+                'detections': detections
+            })
+        cap.release()
+    
+    def parse_detections(self, result):
+        detections = []
+        if result.boxes is not None:
+            for box in result.boxes:
+                detections.append({
+                    'bbox': box.xyxy[0].cpu().numpy(),
+                    'confidence': box.conf[0].cpu().numpy(),
+                    'class_id': int(box.cls[0].cpu().numpy()),
+                    'class_name': self.model.names[int(box.cls[0])]
+                })
+        return detections
+\end{lstlisting}
+
+\subsection{Database Schema}
+
+\begin{lstlisting}[language=SQL, caption=Core Database Tables, label=lst:database_schema]
+-- Core tables for traffic management system
+CREATE TABLE intersections (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    latitude DECIMAL(10, 8),
+    longitude DECIMAL(11, 8),
+    num_lanes INTEGER DEFAULT 4
+);
+
+CREATE TABLE vehicle_detections (
+    id SERIAL PRIMARY KEY,
+    intersection_id INTEGER REFERENCES intersections(id),
+    detection_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    vehicle_type VARCHAR(50),
+    confidence DECIMAL(4, 3),
+    lane_id INTEGER,
+    is_emergency BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE signal_states (
+    id SERIAL PRIMARY KEY,
+    intersection_id INTEGER REFERENCES intersections(id),
+    state_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    active_lane INTEGER,
+    signal_duration INTEGER,
+    emergency_mode BOOLEAN DEFAULT FALSE
+);
+\end{lstlisting}
+
+\subsection{Deployment Configuration}
+
+\begin{lstlisting}[language=bash, caption=Docker Deployment, label=lst:docker_deploy]
+# Dockerfile
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 8080
+CMD ["python", "main.py"]
+
+# docker-compose.yml
+version: '3.8'
+services:
+  traffic-ai:
+    build: .
+    ports: ["8080:8080"]
+    volumes: ["./models:/app/models"]
+    environment: ["CUDA_VISIBLE_DEVICES=0"]
+    restart: unless-stopped
+  
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: traffic_management
+      POSTGRES_USER: traffic_user
+      POSTGRES_PASSWORD: secure_password
+    ports: ["5432:5432"]
+\end{lstlisting}
+
+This appendix provides essential code implementations and configurations that support the main research findings. 

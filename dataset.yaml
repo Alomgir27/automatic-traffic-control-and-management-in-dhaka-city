@@ -1,0 +1,31 @@
+# Dhaka Traffic Dataset Configuration
+path: D:\New folder\thesis\archive\yolov
+train: images/train
+val: images/val
+
+# Number of classes
+nc: 21
+
+# Class names
+names:
+  0: ambulance
+  1: auto rickshaw
+  2: bicycle
+  3: bus
+  4: car
+  5: garbagevan
+  6: human hauler
+  7: minibus
+  8: minivan
+  9: motorbike
+  10: Pickup
+  11: army vehicle
+  12: policecar
+  13: rickshaw
+  14: scooter
+  15: suv
+  16: taxi
+  17: three wheelers (CNG)
+  18: truck
+  19: van
+  20: wheelbarrow
