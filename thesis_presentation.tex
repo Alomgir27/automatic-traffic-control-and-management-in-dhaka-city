@@ -318,33 +318,27 @@
 \begin{frame}{System Architecture}
     \begin{center}
         \begin{tikzpicture}[
-            node distance=2cm,
-            box/.style={rectangle, draw, fill=lightblue!20, minimum width=3cm, minimum height=1cm, 
-                       rounded corners=5pt, thick, align=center},
-            arrow/.style={->, thick, color=darkblue}
+            node distance=1.2cm,
+            box/.style={rectangle, draw, minimum width=4cm, minimum height=0.8cm, 
+                       fill=lightblue!20, align=center},
+            arrow/.style={->, thick}
         ]
-            % Main flow
-            \node[box] (camera) {\textbf{CCTV Camera}\\{\small Live Video Feed}};
-            \node[box, below=of camera] (detection) {\textbf{YOLOv11 Detection}\\{\small Object Recognition}};
-            \node[box, below=of detection] (decision) {\textbf{Decision Engine}\\{\small WJF Algorithm}};
-            \node[box, below=of decision] (control) {\textbf{Signal Control}\\{\small Hardware Interface}};
+            % Simple vertical flow
+            \node[box] (camera) {\textbf{CCTV Camera}};
+            \node[box, below=of camera] (detection) {\textbf{YOLOv11 Detection}};
+            \node[box, below=of detection] (decision) {\textbf{Decision Engine}};
+            \node[box, below=of decision] (control) {\textbf{Traffic Signals}};
             
-            % Side components
-            \node[box, right=3cm of detection] (emergency) {\textbf{Emergency Detection}\\{\small Priority Override}};
-            \node[box, left=3cm of decision] (database) {\textbf{Traffic Database}\\{\small Historical Data}};
-            
-            % Arrows
+            % Simple arrows
             \draw[arrow] (camera) -- (detection);
             \draw[arrow] (detection) -- (decision);
             \draw[arrow] (decision) -- (control);
-            \draw[arrow] (detection) -- (emergency);
-            \draw[arrow] (emergency) -- (decision);
-            \draw[arrow] (database) -- (decision);
             
-            % Labels
-            \node[right, color=darkblue] at ($(camera)!0.5!(detection)$) {\small Video Stream};
-            \node[right, color=darkblue] at ($(detection)!0.5!(decision)$) {\small Vehicle Count};
-            \node[right, color=darkblue] at ($(decision)!0.5!(control)$) {\small Signal Timing};
+            % Simple side labels
+            \node[right=0.3cm] at (camera.east) {\small Video Stream};
+            \node[right=0.3cm] at (detection.east) {\small Vehicle Count};
+            \node[right=0.3cm] at (decision.east) {\small WJF Algorithm};
+            \node[right=0.3cm] at (control.east) {\small Signal Control};
         \end{tikzpicture}
     \end{center}
 \end{frame}
