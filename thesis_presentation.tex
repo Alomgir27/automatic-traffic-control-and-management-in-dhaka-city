@@ -666,7 +666,7 @@
 
 \begin{frame}{Cost-Benefit Analysis}
     \begin{columns}
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.5\textwidth}
             \begin{itemize}
                 \item \textbf{Annual Net Benefits}: \$8.065 million
                 \item \textbf{Return on Investment}: 672\%
@@ -675,40 +675,36 @@
                 \item \textbf{User Satisfaction}: 87\% overall satisfaction
             \end{itemize}
         \end{column}
-        \begin{column}{0.4\textwidth}
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=\textwidth]{thesis_final/figures/6.png}
-                \caption{\footnotesize Economic Impact Analysis}
-            \end{figure}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        ybar,
+                        width=5.5cm,
+                        height=4cm,
+                        ylabel={\small Benefits (\$ millions)},
+                        symbolic x coords={Fuel,Time,CO2,Emergency},
+                        xlabel={\small Impact Categories},
+                        xtick=data,
+                        nodes near coords,
+                        nodes near coords align={vertical},
+                        bar width=12pt,
+                        fill=green!50,
+                        text=black,
+                        ymin=0,
+                        ymax=4,
+                    ]
+                    \addplot coordinates {
+                        (Fuel,2.1)
+                        (Time,3.8)
+                        (CO2,0.9)
+                        (Emergency,1.2)
+                    };
+                    \end{axis}
+                \end{tikzpicture}
+            \end{center}
         \end{column}
     \end{columns}
-    
-    \vspace{0.3cm}
-    \begin{center}
-        \begin{tikzpicture}
-            \begin{axis}[
-                ybar,
-                width=9cm,
-                height=3cm,
-                ylabel={\footnotesize Count (thousands)},
-                symbolic x coords={Regular,Pedestrians,Emergency},
-                xlabel={\footnotesize Object Categories},
-                xtick=data,
-                nodes near coords,
-                nodes near coords align={vertical},
-                bar width=20pt,
-                fill=lightblue!60,
-                text=black,
-            ]
-            \addplot coordinates {
-                (Regular,107)
-                (Pedestrians,64)
-                (Emergency,1)
-            };
-            \end{axis}
-        \end{tikzpicture}
-    \end{center}
 \end{frame}
 
 \section{Conclusions}
